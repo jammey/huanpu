@@ -1,0 +1,116 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>账户充值</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquerym.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquerym.css">
+    <script src="js/hpapp.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div data-role="page" id="page7" style="overflow:hidden; background: -webkit-gradient(linear, left top, left bottom, from(#2491bd), color-stop(0.5, #05719c), to(#54c2f0)); ">
+        <div class="top" style="position:fixed; top:0; left:0; right:0; z-index:100; background: -webkit-gradient(linear, left top, left bottom, from(#54c2f0), color-stop(1, #05719c), to(#54c2f0));">
+
+            <div style="height:100%; width:5%; float:left;"></div>
+            <div style=" height:100%;background:url(images/logo2.png) no-repeat; background-position:center; background-size:contain; width:15%; float:left;"></div>
+            <div style="height:100%; width:1%; float:left;"></div>
+            <div style="height:100%; width:30%; float:left; text-align:left; font-weight:bold; color:#fff; text-shadow:none;">账户充值</div>
+
+            <div class="fanh" style="width:15%; height:80%;float:right;">
+
+                <input id="btnIndex" type="button" style=" border-radius:5px; width:100%; height:100%; border:none; color:#fff;  background: -webkit-gradient(linear, left top, left bottom, from(#54c2f0), color-stop(0.5, #3a9eca), to(#0a5e86)); box-shadow:2px 2px 5px 0 #333;" value="首页" data-role="none">
+            </div>
+            <div class="xinx" style=" background:url(images/xinx.png) no-repeat; background-position:center; width:15%; float:right; height:100%; background-size:60% auto;"></div>
+        </div>
+        <div class="h1"></div>
+        <div class="user" style="width:95%; margin:0 auto; background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfc), color-stop(0.5, #ebedee), to(#dee0e2));">
+            <input id="btnCardId" type="button" value="" style="width:100%;color:#5e5f60; height:100%; border:none; background:none;  font-weight:bold;" data-role="none">
+        </div>
+        <div class="main" style="width:95%;overflow:hidden;  background:#fff; margin:0 auto;">
+
+
+
+            <div class="yecz" style="width:80%; margin:0 auto; ">
+
+                <p style="height:100%;">充值金额：
+                    <select name="select-choice-mini" id="ddlMoney" data-mini="true" data-inline="true">
+                        <option value="30">30元</option>
+                        <option value="50">50元</option>
+                        <option value="100">100元</option>
+                        <option value="200">200元</option>
+                    </select>
+                </p>
+
+            </div>
+            <div class="yecz1" style="width:100%; border-bottom:1px solid #aaa; ">
+                <fieldset data-role="controlgroup" data-type="horizontal" style=" width:80%; margin:0 auto;">
+                    <input type="radio" name="radio-choice-b" id="chkCurrent" value="current" checked="checked">
+                    <label for="chkCurrent">本账户充值</label>
+                    <input type="radio" name="radio-choice-b" id="chkOther" value="other">
+                    <label for="chkOther">其他账户充值</label>
+                </fieldset>
+                <!--<p style=" width:80%; margin:0 auto;"><input type="radio" name="chongzhileixing"> 本账户充值&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio"  name="chongzhileixing"> 其他账户充值</p>-->
+                <br />
+            </div>
+            <div class="yeczxxx" style="width:100%; border-bottom:1px solid #aaa;">
+
+                <p style="height:100%; width:80%; margin:0 auto; ">一卡通卡号：<input id="otherCardId" type="text" data-role="none" style=" border-radius:5px; width:60%; border:1px solid #aaa; height:30%;   "></p>
+
+
+            </div>
+            <div class="yean" style="  position:relative;  text-align:center; ">
+                   <input id="btnChongzhi" type="button" value="充值" data-role="none" style="box-shadow:1px 1px 1px 0; border-radius:5px; width:45%; height:50%; border:1px solid #ccc; background: -webkit-gradient(linear, left top, left bottom, from(#fafafb), color-stop(0.5, #ecedef), to(#e0e2e4)); ">
+</div>
+            <div class="m1"></div>
+
+        </div>
+        
+        
+
+        <div class="foot" style="position:fixed; z-index:100;  bottom:0; left:0; right:0; background: -webkit-gradient(linear, left top, left bottom, from(#54c2f0), color-stop(0.4, #2794c0),color-stop(0.8, #33a0cd), to(#379ec8)) ">
+            <a href="#" class="backButton" style="color:white" data-role="button" data-rel="back" data-inline="true" data-corners="true">返回</a>
+        </div>
+
+        <form name="form1" id="payForm"  method="post" action="https://pbanktest.95559.com.cn/netpay/MerPayB2C">
+            <input type="hidden" name="interfaceVersion" id="interfaceVersion" value="" />
+            <input type="hidden" name="merID" id="merID" value="" />
+            <input type="hidden" name="orderid" id="orderid" value="" />
+            <input type="hidden" name="orderDate" id="orderDate" value="" />
+            <input type="hidden" name="orderTime" id="orderTime" value="" />
+            <input type="hidden" name="tranType" id="tranType" value="" />
+            <input type="hidden" name="amount" id="amount" value="" />
+            <input type="hidden" name="curType" id="curType" value="" />
+            <input type="hidden" name="orderContent" id="orderContent" value="" />
+            <input type="hidden" name="orderMono" id="orderMono" value="" />
+            <input type="hidden" name="phdFlag" id="phdFlag" value="" />
+            <input type="hidden" name="notifyType" id="notifyType" value="" />
+            <input type="hidden" name="merURL" id="merURL" value="" />
+            <input type="hidden" name="goodsURL" id="goodsURL" value="" />
+            <input type="hidden" name="jumpSeconds" id="jumpSeconds" value="" />
+            <input type="hidden" name="payBatchNo" id="payBatchNo" value="" />
+            <input type="hidden" name="proxyMerName" id="proxyMerName" value="" />
+            <input type="hidden" name="proxyMerType" id="proxyMerType" value="" />
+            <input type="hidden" name="proxyMerCredentials" id="proxyMerCredentials" value="" />
+            <input type="hidden" name="netType" id="netType" value="" />
+            <input type="hidden" name="merSignMsg" id="merSignMsg" value="" />
+            <input type="hidden" name="issBankNo" id="issBankNo" value="" />
+
+        </form>
+
+
+        </div>
+    <div id="messageDialog" data-role="popup" data-dismissible="false" style="max-width:400px;">
+        <div data-role="header">
+            <h2>用户充值</h2>
+        </div>
+        <div role="main" class="ui-content">
+            <a href="yue_cx.html" data-inline="true" data-role="button">支付成功</a>
+            <a href="yue_cx.html" data-inline="true" data-role="button">支付遇到问题</a>
+        </div>
+    </div>
+</body>
+</html>

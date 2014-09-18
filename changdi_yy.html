@@ -1,0 +1,151 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>场地预约</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquerym.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquerym.css">
+    <script src="js/hpapp.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/timepiker.js"></script>
+
+
+</head>
+<body>
+    <div data-role="page" id="page12" style="overflow:hidden; background: -webkit-gradient(linear, left top, left bottom, from(#2491bd), color-stop(0.5, #05719c), to(#54c2f0)); ">
+
+        <div class="hed" style="position:fixed; top:0; z-index:100; left:0; right:0;">
+            <div class="top" style="  background: -webkit-gradient(linear, left top, left bottom, from(#54c2f0), color-stop(1, #05719c), to(#54c2f0));">
+
+                <div style="height:100%; width:5%; float:left;"></div>
+                <div style=" height:100%;background:url(images/logo2.png) no-repeat; background-position:center; background-size:contain; width:15%; float:left;"></div>
+                <div style="height:100%; width:1%; float:left;"></div>
+                <div style="height:100%; width:30%; float:left; text-align:left; font-weight:bold; color:#fff; text-shadow:none;">场地预约</div>
+
+                <div class="fanh" style="width:15%; height:80%;float:right;">
+
+                    <input id="btnIndex" type="button" style=" border-radius:5px; width:100%; height:100%; border:none; color:#fff;  background: -webkit-gradient(linear, left top, left bottom, from(#54c2f0), color-stop(0.5, #3a9eca), to(#0a5e86)); box-shadow:2px 2px 5px 0 #333;" value="首页" data-role="none">
+                </div>
+
+                <div class="xinx" style=" background:url(images/xinx.png) no-repeat; background-position:center; width:15%; float:right; height:100%; background-size:60% auto;"></div>
+            </div>
+            <div class="menu22" style="text-shadow:none; width:95%; margin:0 auto; background:#fff;">
+                <div style="float:left; width:33%; height:100%;  background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfc), color-stop(0.5, #e9eaec), to(#dfe0e2)); border-radius:5px; box-shadow:0px 0px 2px 0; ">
+                    <div style=" width:90%; margin:0 auto; height:100%; background:url(images/yy1.png) no-repeat; background-position:right; background-size:20% auto ;">
+                        <p style="float:left;">
+                            <span style=" color:#54c2f0; font-weight:bold;">STEP1</span><br>
+                            <span style=" color:#000; ">场地预约</span>
+                        </p>
+                    </div>
+
+
+                </div>
+                <div class="w1"></div>
+                <div style="float:left; width:33%; height:100%; background: -webkit-gradient(linear, left top, left bottom, from(#a8b6c7), color-stop(0.5, #7e92ad), to(#6f85a3)); border-radius:5px; box-shadow:0px 0px 2px 0; ">
+                    <div style=" width:90%; margin:0 auto; height:100%; background:url(images/yy22.png) no-repeat; background-position:right; background-size:20% auto ;">
+                        <p style="float:left;">
+                            <span style=" color:#fff; font-weight:bold;">STEP2</span><br>
+                            <span style=" color:#b9c3d2; ">预约时间</span>
+                        </p>
+                    </div>
+
+
+                </div>
+                <div class="w1"></div>
+                <div style="float:left; width:33%; height:100%;  background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfc), color-stop(0.5, #e9eaec), to(#dfe0e2)); border-radius:5px; box-shadow:0px 0px 2px 0; ">
+                    <div style=" width:90%; margin:0 auto; height:100%; background:url(images/yy3.png) no-repeat; background-position:right; background-size:20% auto ;">
+                        <p style="float:left;">
+                            <span style=" color:#54c2f0; font-weight:bold;">STEP3</span><br>
+                            <span style=" color:#000; ">信息提交</span>
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="h1"></div>
+        <div class="menu1" style="width:95%; margin:0 auto; background: -webkit-gradient(linear, left top, left bottom, from(#e6eaef), color-stop(0.5, #e5e9ee), to(#e5e9ee));">
+            <div style="width:90%; height:100%; margin:0 auto;" id="divChangdi">
+                
+            </div>
+        </div>
+        <div style="width:95%;overflow:hidden; height:auto;  background:#fff; margin:0 auto;">
+
+            <div class="time" style="border-bottom:1px solid #ccc; height:auto">
+                <!--日期选择-->
+                <div class="ti1" style="border-bottom:1px solid #ccc;  text-align:center; font-weight:bold;">
+
+                    <div class="prev" style=" background:url(images/c_tb01.png) no-repeat; background-position:center;"></div>
+                    <div class="dateP">
+
+                        <ul>
+                            <!--<li>2012-7-24</li>
+                            <li>2012-7-25</li>
+                            <li>2012-7-26</li>-->
+                        </ul>
+
+                    </div>
+                    <div class="next" style=" background:url(images/c_tb.png) no-repeat; background-position:center;"></div>
+
+                </div>
+            </div> <!--日期选择-->
+            <!--小时选择-->
+            <div class="hourBox">
+                <ul>
+                    <li check=0><div><span></span></div></li>
+                    <li check=0><div><span></span></div></li>
+                    <li check=0><div><span></span></div></li>
+                    <li check=0><div><span></span></div></li>
+                    <li check=0><div><span></span></div></li>
+                    <li check=0><div><span></span></div></li>
+                    <li check=0><div><span></span></div></li>
+                    <li check=0><div><span></span></div></li>
+                    <li check=0><div><span></span></div></li>
+                    <li check=0><div><span></span></div></li>
+                    <li check=0><div><span></span></div></li>
+                    <li check=0><div><span></span></div></li>
+                    <li check=0><div><span></span></div></li>
+                    <li check=0><div><span></span></div></li>
+                    <li check=0><div><span></span></div></li>
+                    <li check=0><div><span></span></div></li>
+                    <li check=0><div><span></span></div></li>
+                    <li check=0><div><span></span></div></li>
+                    <li check=0><div><span></span></div></li>
+                    <li check=0><div><span></span></div></li>
+                    <li check=0><div><span></span></div></li>
+                    <li check=0><div><span></span></div></li>
+                    <li check=0><div><span></span></div></li>
+                    <li check=0><div><span></span></div></li>
+                </ul>
+            </div><!--小时选择-->
+
+            <div class="main1" style=" overflow:hidden; height:auto;">
+
+                <ul data-role="listview" id="orderList1">
+                    <li>选择时间生成订单</li>
+
+                </ul>
+            </div>
+
+            <div class="cdan" style=" background:#e3e7ed;">
+                <div class="cdan1" style="width:45%; height:75%;background: -webkit-gradient(linear, left top, left bottom, from(#d3dae3), color-stop(0.5, #cad1d9), to(#d6dde5)); border-radius:5px;box-shadow:0 0 2px 0; margin:0 auto; text-align:center; text-shadow:none; " id="btn_order">
+                    提交预定
+                </div>
+            </div>
+
+            <div class="m1"></div>
+
+        </div>
+
+
+        <div class="foot" style="position:fixed; z-index:100;  bottom:0; left:0; right:0; background: -webkit-gradient(linear, left top, left bottom, from(#54c2f0), color-stop(0.4, #2794c0),color-stop(0.8, #33a0cd), to(#379ec8)) ">
+            <a href="#" class="backButton" style="color:white" data-role="button" data-rel="back" data-inline="true" data-corners="true">返回</a>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>登录</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">	
+    <script src="js/jquery.js"></script>
+    <script src="js/jquerym.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquerym.css">
+    <script src="js/hpapp.js"></script>
+    <script src="js/timepiker.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+        // Wait for device API libraries to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        // device APIs are available
+        //
+        function onDeviceReady() {
+            checkConnection();
+        }
+
+        function checkConnection() {
+            var networkState = navigator.connection.type;
+
+            if(networkState == Connection.NONE)
+            {
+                alert("您的网络没有开启或者信号太弱，请设置您的网络");
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+<div data-role="page" id="page1"  style="background:url(images/bg_0.jpg)  no-repeat;background-size: cover; overflow:hidden; ">
+	<div class="h2"></div>
+   <div class="logo" style="background:url(images/logo.png)  no-repeat;background-size:contain; background-position:center; "></div>
+   <div class="h2"></div>
+   <div style="width:70%; margin:0 auto; ">
+   		<div class="name" style=" background: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), color-stop(0.5, #e6e6e6), to(#d0d0d0)); border-radius:5px;">
+        	<div style=" width:25%;float:left; height:100%; background:url(images/name1.png) no-repeat; background-position:center; background-size: auto 60%; "></div><div style="width:70%; height:100%; float:left;"><input data-role="none" style=" width:100%; height:93%; font-family:Arial; font-weight:bold; color:#a2a8a9; border:none; background:none;" placeholder="USERNAME" type="text" id="txtUsername"></div>
+        </div>
+           <div class="h3"></div>
+        <div class="name" style=" background: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), color-stop(0.5, #e6e6e6), to(#d0d0d0)); border-radius:5px;">
+        	<div style=" width:25%;float:left; height:100%; background:url(images/name2.png) no-repeat; background-position:center; background-size: auto 60%; "></div><div style="width:70%; height:100%; float:left;"><input data-role="none" style=" width:100%; height:93%; font-family:Arial; font-weight:bold; color:#a2a8a9; border:none; background:none;" placeholder="PASSWOPD" type="password" id="txtPassword"></div>
+        </div>
+        <div class="h4"></div>
+         <div class="name" >
+             <input id="btnLogin" data-role="none" type="button" value="Login" style=" width:100%; height:100%; border:none; color:#fff; font-family:Arial; font-weight:bold;font-size:1.5em; background: -webkit-gradient(linear, left top, left bottom, from(#51bfed), color-stop(0.5, #006c96), to(#006c96)); border-radius:5px; text-shadow:none; ">
+        </div>
+        
+      
+   </div>
+   <div class="h5"></div>
+   <div class="foot" style="width:60%; margin:0 auto; text-shadow:none; color:#fff; font-size:1.2em;  ">
+   		
+       <div id="mimachongzhi" style=" width:100%; height:100%; float:left; text-align:center;">密码重置</div>
+   </div>
+     
+ 	
+</div>
+</body>
+</html>

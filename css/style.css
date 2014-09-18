@@ -1,0 +1,44 @@
+/* CSS Document */
+
+*{ margin:0; padding:0; text-shadow:none}
+.main span{ float:left; }
+.main img{ float:left; margin-right:5px;}
+.w1{ width:0.5%; height:100%; float:left;}
+
+/*-------时间选择器样式----------------------*/
+.prev{ float:left; display:block;    height:100%; width:20%; }
+.next{float:left; display:block; height:100%; width:20%; }
+.dateP{ height:100%; width:60%;float:left; position:relative; overflow:hidden}
+.dateP ul{width:auto; position:absolute; left:0px; list-style:none;}
+.dateP ul li{display:inline-block; text-align:center; float:left; height:100%;}
+
+.hourBox{height:auto; overflow:hidden}
+.hourBox ul{list-style:none;}
+.hourBox ul li{ width:16.6666666%; float:left; box-sizing:border-box;}
+
+
+.default div { height:100%;}
+.default div span{ display:block; width:100%; height:100%; font-family:Tahoma, Geneva, sans-serif; font-size:14px;color:#333;
+text-align:center; border-radius:60%; border:#333 2px solid ; box-sizing:border-box; font-size:1em}
+
+
+.checked div{}
+.checked div span{background-color:#3CF; border:#fff 2px solid; color:#FFF }
+
+.unable div{}
+.unable div span{background-color:#FF0;}
+/*-------时间选择器样式----------------------*/
+
+.backButton
+{
+    margin-left:10px; border:none; padding-top:5px;  font-weight:100;
+    background: -webkit-gradient(linear, left top, left bottom, from(#54c2f0), color-stop(0.5, #3a9eca), to(#0a5e86));
+}
+/*-------场地选择----------------------*/
+.cd01{width:50%; float:left;height:100%; background:url(../images/yy0.png) no-repeat;background-position:left; background-size:10%; text-align:center;}
+.cdslected{background:url(../images/yy.png) no-repeat;color:#09F;
+width:50%; float:left;height:100%;background-position:left; background-size:10%; text-align:center;
+}
+
+.jyls{background: -webkit-gradient(linear, left top, left bottom, from(#fcfcfd), color-stop(0.4, #edeeef),to(#dfe1e3));}
+.jyls1{ background:-webkit-gradient(linear, left top, left bottom, from(#54c2f0), color-stop(0.4, #2794c0),color-stop(0.8, #33a0cd), to(#379ec8)); color:#fff;}		
