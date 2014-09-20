@@ -11,7 +11,7 @@
   <author href="http://phonegap.com" email="support@163.com">
     环普科技产业园
   </author>
-  <preference name="phonegap-version" value="3.5.0" />
+  <preference name="phonegap-version" value="3.0.0" />
   <gap:plugin name="org.apache.cordova.inappbrowser" />
 
   <feature name="NetworkStatus">
