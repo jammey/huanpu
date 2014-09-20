@@ -158,8 +158,9 @@ function initSports(date) {
 
 //--------------------page1-index.html----------------------------//
 $(document).on("pageinit", "#page1", function () {
-    
-    // console.log("page");
+});
+
+$(document).on("pageshow", "#page1", function () {
     $(".h2").height(hh * 90 / 800);
     $(".h3").height(hh * 10 / 800);
     $(".h4").height(hh * 25 / 800);
@@ -168,9 +169,6 @@ $(document).on("pageinit", "#page1", function () {
     $(".name").height(hh * 75 / 800);
     $(".login").height(hh * 76 / 800);
     $(".foot").height(hh * 30 / 800);
-});
-
-$(document).on("pageshow", "#page1", function () {
     if (window.localStorage && localStorage.UserId) {
         changePage("gongneng.html");
     }
@@ -555,7 +553,6 @@ $(document).on("pageinit", "#page8", function () {
     $(".user").height(hh * 80 / 800);
     $(".foot").height(hh * 65 / 800);
     $(".m1").height($(".foot").height() + 200);
-    
 });
 
 $(document).on("pageshow", "#page8", function () {
