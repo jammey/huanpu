@@ -535,7 +535,7 @@ $(document).on("pageshow", "#page7", function () {
                 return;
             }
         }
-        $.mobile.changePage("#messageDialog", { role: "dialog" });
+        $("#messageDialog").popup("open");
        var ref = window.open(rootPath + 'PhonePay.aspx?strCardId=' + chongzhiCardId + "&strMoney=" + $("#ddlMoney").val(), '_system', 'location=yes');
         
     })
