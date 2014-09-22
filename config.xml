@@ -27,7 +27,9 @@
     <false/>
   </gap:config-file>
   <preference name="StatusBarOverlaysWebView" value="true" />
-  <icon src="ic_launcher.png"/>
+  <icon src="icon.png"/>
+  <preference name="SplashScreen" value="splash" />
+  <preference name="SplashScreenDelay" value="5000" />
   <icon gap:platform="android" gap:qualifier="ldpi" src="res/drawable-ldpi/ic_launcher.png" />
   <icon gap:platform="android" gap:qualifier="mdpi" src="res/drawable-mdpi/ic_launcher.png" />
   <icon gap:platform="android" gap:qualifier="hdpi" src="res/drawable-hdpi/ic_launcher.png" />
