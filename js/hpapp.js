@@ -41,12 +41,14 @@ function GetHour(val)
 
 function showLoading()
 {
-    $.mobile.loading('show', {
-        text: '',
-        textVisible: false,
-        theme: 'a',
-        html: ""
-    });
+    setTimeout(function(){
+        $.mobile.loading('show', {
+            text: '',
+            textVisible: false,
+            theme: 'a',
+            html: ""
+        });
+    },20000)
 }
 
 function hideLoading() {
@@ -200,9 +202,10 @@ $(document).on("pageshow", "#page1", function () {
                 strUserID: txtUsername
             }, function (res) {
                 if (window.localStorage) {
-                    localStorage.UserId = data.Data.UserId;
+                    localStorage.UserId = data.Data.Id;
                     localStorage.Email = res.Data.email;
                     localStorage.CardID = res.Data.cardid;
+                    localStorage.IDCardNo = res.Data.personid;
                     changePage("gongneng.html");
                 }
                 else {
@@ -516,18 +519,18 @@ $(document).on("pageshow", "#page7", function () {
     $("#btnCardId").val("卡号：" + localStorage.CardID);
 
     $("#btnChongzhi").on("click", function () {
-        var chongzhiCardId = localStorage.CardID;
+        var chongzhiCardId = localStorage.IDCardNo;
         
         if (checkedValue == "other")
         {
             chongzhiCardId = $("#otherCardId").val();
             if(chongzhiCardId == "")
             {
-                alert("请输入要充值的卡号");
+                alert("请输入要充值的身份证号码");
                 return;
             }
 
-            if (!confirm("请确认卡号 " + chongzhiCardId + " 是否正确？"))
+            if (!confirm("请确认身份证号码 " + chongzhiCardId + " 是否正确？"))
             {
                 return;
             }
@@ -708,6 +711,42 @@ $(document).on("pageshow", "#page10", function () {
     $("#btnIndex").on("click", function () {
         goIndex();
     });
+
+    $("#btnEditUser").on("click", function () {
+        var txtEmail = $("#txtUserEmail").val();
+        var txtTel = $("#txtUserTel").val();
+        
+        if (txtTel == "")
+        {
+            alert("请输入联系电话");
+            return;
+        }
+            if (txtEmail == "") {
+                alert("请输入Email");
+                return;
+            } 
+            if (txtTel != $("#txtTel").text() || txtEmail != $("#txtEmail").text()) {
+                showLoading();
+                $.getJSON(rootPath + "/Hp_Service.asmx/EditUserInfo?callback=?", {
+                    strUserID: localStorage.UserId,
+                    strEmail: txtEmail,
+                    strPhone: txtTel
+                }, function (data) {
+                    hideLoading();
+                    if (data.IsSuccess) {
+                        localStorage.Email = data.Data.email;
+                        $("#txtTel").text(txtTel);
+                        $("#txtEmail").text(txtEmail);
+                        $("#popupEditUser").popup("close");
+;                    } else {
+                        alert(data.Message)
+                    }
+                });
+            } else {
+                $("#popupEditUser").popup("close");
+            }
+    });
+
     showLoading();
     $.getJSON(rootPath + "/Hp_Service.asmx/GetUserInfo?callback=?", {
         strUserID: localStorage.Email
@@ -725,9 +764,12 @@ $(document).on("pageshow", "#page10", function () {
             $("#txtTruename").text(data.Data.name);
             $("#txtSex").text(data.Data.sex);
             $("#txtCompany").text(data.Data.company);
-            $("#txtIDCard").text(data.Data.cardid);
+            $("#txtIDCard").text(data.Data.personid);
             $("#txtTel").text(data.Data.phone);
             $("#txtEmail").text(data.Data.email);
+
+            $("#txtUserEmail").val(data.Data.email);
+            $("#txtUserTel").val(data.Data.phone);
         }
     });
 

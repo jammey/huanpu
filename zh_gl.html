@@ -132,30 +132,45 @@
 <li style=" background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfc), color-stop(0.5, #ebedee), to(#dee0e2)); position:relative; border-top:1px solid #666; ">
 
 <div style="width:95%; margin:0 auto; text-align:left; font-weight:bold; color:#5e5f60; background:url(images/c_tb.png) no-repeat;  background-position:right;">
-
-<p style="text-align:left;"><img class="img1" src="images/zh9.png"  ><span style=" float:left;margin-top:10px;">
-	<span  style="color:#54c2f0; width:100%;">联系电话</span>
-    <span style=" width:100%; float:left;" id="txtTel"></span>
-</span></p>
-
+    <a href="#popupEditUser" data-rel="popup" data-position-to="window" data-transition="pop">
+        <p style="text-align:left;">
+            <img class="img1" src="images/zh9.png"><span style=" float:left;margin-top:10px;">
+                <span style="color:#54c2f0; width:100%;">联系电话</span>
+                <span style=" width:100%; float:left;" id="txtTel"></span>
+            </span>
+        </p>
+        </a>
 </div>
 </li>
 <li style=" background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfc), color-stop(0.5, #ebedee), to(#dee0e2)); position:relative; border-top:1px solid #666; ">
 
 <div style="width:95%; margin:0 auto; text-align:left; font-weight:bold; color:#5e5f60;  background:url(images/c_tb.png) no-repeat;  background-position:right;">
-
-<p style="text-align:left;"><img class="img1" src="images/zh10.png"  ><span style=" float:left;margin-top:10px;">
-	<span  style="color:#54c2f0; width:100%;">Email</span>
-    <span style=" width:100%; float:left;" id="txtEmail"></span>
-</span></p>
-
+    <a href="#popupEditUser" data-rel="popup" data-position-to="window" data-transition="pop">
+        <p style="text-align:left;">
+            <img class="img1" src="images/zh10.png"><span style=" float:left;margin-top:10px;">
+                <span style="color:#54c2f0; width:100%;">Email</span>
+                <span style=" width:100%; float:left;" id="txtEmail"></span>
+            </span>
+        </p>
+    </a>
 </div>
 </li>
 
     
     
  </ul>
-
+        <div data-role="popup" id="popupEditUser" class="ui-corner-all">
+                <div style="padding:10px 20px;">
+                    <h3>请输入要修改的用户信息</h3>
+                    <label for="txtUserTel" class="ui-hidden-accessible">联系电话:</label>
+                    <input type="tel" id="txtUserTel" value="" placeholder="联系电话">
+                    <label for="txtUserEmail" class="ui-hidden-accessible">Email:</label>
+                    <input type="email" id="txtUserEmail" value="" placeholder="Email">
+                    <div class="yean" style="  position:relative;  text-align:center; ">
+                        <input id="btnEditUser" type="button" value="确定" data-role="none" style="box-shadow:1px 1px 1px 0; border-radius:5px; width:45%; height:50%; border:1px solid #ccc; background: -webkit-gradient(linear, left top, left bottom, from(#fafafb), color-stop(0.5, #ecedef), to(#e0e2e4)); ">
+                    </div>
+                </div>
+        </div>
  
  <div  class="m1"></div>
   

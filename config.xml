@@ -11,7 +11,7 @@
   <author href="http://phonegap.com" email="support@163.com">
     环普科技产业园
   </author>
-  <preference name="phonegap-version" value="3.0.0" />
+  <preference name="phonegap-version" value="3.5.0" />
   <gap:plugin name="org.apache.cordova.inappbrowser" />
 
   <feature name="NetworkStatus">
@@ -19,19 +19,27 @@
     <param name="ios-package" value="CDVConnection" />
   </feature>
 
+  <gap:plugin name="com.phonegap.plugin.statusbar" />
+  <gap:config-file platform="ios" parent="UIStatusBarHidden">
+    <true/>
+  </gap:config-file>
+  <gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance">
+    <false/>
+  </gap:config-file>
+  <preference name="StatusBarOverlaysWebView" value="true" />
+  <icon src="ic_launcher.png"/>
   <icon gap:platform="android" gap:qualifier="ldpi" src="res/drawable-ldpi/ic_launcher.png" />
   <icon gap:platform="android" gap:qualifier="mdpi" src="res/drawable-mdpi/ic_launcher.png" />
   <icon gap:platform="android" gap:qualifier="hdpi" src="res/drawable-hdpi/ic_launcher.png" />
-  <icon gap:platform="android" gap:qualifier="xhdpi" src="res/drawable-xhdpi/ic_launcher.png" /> 
+  <icon gap:platform="android" gap:qualifier="xhdpi" src="res/drawable-xhdpi/ic_launcher.png" />
   <icon gap:platform="android" gap:qualifier="xxhdpi" src="res/drawable-xxhdpi/ic_launcher.png" />
   <icon gap:platform="ios" height="57" src="res/icon/ios/Icon.png" width="57" />
-    <icon gap:platform="ios" height="114" src="res/icon/ios/Icon@2x.png" width="114" />
-    
+  <icon gap:platform="ios" height="114" src="res/icon/ios/Icon@2x.png" width="114" />
   <gap:splash src="res/screen/android/bg_01.png"  gap:platform="android" gap:density="ldpi" />
   <gap:splash src="res/screen/android/bg_02.png"  gap:platform="android" gap:density="mdpi" />
   <gap:splash src="res/screen/android/bg_03.png"  gap:platform="android" gap:density="hdpi" />
   <gap:splash src="res/screen/android/bg_04.png" gap:platform="android" gap:density="xhdpi" />
-  <gap:splash src="res/screen/ios/Default.png" gap:platform="ios" width="320" height="480" />
-<gap:splash src="res/screen/ios/Default@2x.png" gap:platform="ios" width="640" height="960" />
+  <gap:splash src="res/screen/ios/3.png" gap:platform="ios" width="320" height="480" />
+  <gap:splash src="res/screen/ios/2.png" gap:platform="ios" width="640" height="960" />
   <!-- content src="http://www.w3.org/2010/05/video/mediaevents.html" / -->
 </widget>
