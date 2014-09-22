@@ -39,16 +39,13 @@ function GetHour(val)
     return "";
 }
 
-function showLoading()
-{
-    setTimeout(function(){
-        $.mobile.loading('show', {
-            text: '',
-            textVisible: false,
-            theme: 'a',
-            html: ""
-        });
-    },20000)
+function showLoading() {
+    $.mobile.loading('show', {
+        text: '',
+        textVisible: false,
+        theme: 'a',
+        html: ""
+    });
 }
 
 function hideLoading() {
@@ -535,9 +532,8 @@ $(document).on("pageshow", "#page7", function () {
                 return;
             }
         }
+        var ref = window.open(rootPath + 'PhonePay.aspx?strCardId=' + chongzhiCardId + "&strMoney=" + $("#ddlMoney").val(), '_system', 'location=no');
         $("#messageDialog").popup("open");
-       var ref = window.open(rootPath + 'PhonePay.aspx?strCardId=' + chongzhiCardId + "&strMoney=" + $("#ddlMoney").val(), '_system', 'location=yes');
-        
     })
 });
 
