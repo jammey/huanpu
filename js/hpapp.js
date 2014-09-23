@@ -3,7 +3,7 @@ ww = $(window).width();
 
 hh = $(window).height();
 
-var rootPath = "http://113.140.83.74:6702/";
+var rootPath = "http://app.glpipark-xian.com:8002/";
 //var rootPath = "http://127.0.0.1/";
 
 function ChangeDateFormat(val) {
