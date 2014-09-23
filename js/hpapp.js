@@ -583,11 +583,11 @@ $(document).on("pageshow", "#page8", function () {
                     //alert("xxxxxxxxxxx")  选择与取消 功能
                     if ($(this).val() == "0") {
                         $(this).val(1)
-                        $(this).find("img").attr("src", "../images/duih2.png")
+                        $(this).find("img").attr("src", "images/duih2.png")
 
                     } else {
                         $(this).val(0)
-                        $(this).find("img").attr("src", "../images/duih1.png")
+                        $(this).find("img").attr("src", "images/duih1.png")
                     } $(".dianjixg").listview("refresh");
 
                 });
@@ -694,7 +694,7 @@ $(document).on("pageinit", "#page10", function () {
     $(".m1").height($(".foot").height() + 200);
 
     /*没有信息调用下面这一句*/
-    $(".xinx").css("background-image", "url(../images/xinx.png)");
+    $(".xinx").css("background-image", "url(images/xinx.png)");
     /*有信息调用下面这一句
 	$(".xinx").css("background-image","url(../images/xinx1.png)");
 	*/
