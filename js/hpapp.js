@@ -186,31 +186,31 @@ $(document).on("pageshow", "#page1", function () {
             return;
         }
         showLoading();
-        //$.getJSON(rootPath + "/Hp_Service.asmx/UserLogin?callback=?", {
-        //    strUserID: txtUsername,
-        //    strPassword: txtPassword
-        //}, function (data) {
-        //    hideLoading();
-        //    if (!data.IsSuccess) {
-        //        alert("用户名或者密码错误，请重试");
-        //        return;
-        //    }
-        //    $.getJSON(rootPath + "/Hp_Service.asmx/GetUserInfo?callback=?", {
-        //        strUserID: txtUsername
-        //    }, function (res) {
-        //        if (window.localStorage) {
-        //            localStorage.UserId = data.Data.Id;
-        //            localStorage.Email = res.Data.email;
-        //            localStorage.CardID = res.Data.cardid;
-        //            localStorage.IDCardNo = res.Data.personid;
+        $.getJSON(rootPath + "/Hp_Service.asmx/UserLogin?callback=?", {
+            strUserID: txtUsername,
+            strPassword: txtPassword
+        }, function (data) {
+            hideLoading();
+            if (!data.IsSuccess) {
+                alert("用户名或者密码错误，请重试");
+                return;
+            }
+            $.getJSON(rootPath + "/Hp_Service.asmx/GetUserInfo?callback=?", {
+                strUserID: txtUsername
+            }, function (res) {
+                if (window.localStorage) {
+                    localStorage.UserId = data.Data.Id;
+                    localStorage.Email = res.Data.email;
+                    localStorage.CardID = res.Data.cardid;
+                    localStorage.IDCardNo = res.Data.personid;
                     changePage("gongneng.html");
-        //        }
-        //        else {
-        //            alert("您的手机不支持本地存储，所以不能自动登录");
-        //            changePage("gongneng.html");
-        //        }
-        //    });
-        //});
+                }
+                else {
+                    alert("您的手机不支持本地存储，所以不能自动登录");
+                    changePage("gongneng.html");
+                }
+            });
+        });
     });
 
 
