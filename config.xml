@@ -11,15 +11,27 @@
   <author href="http://phonegap.com" email="support@163.com">
     环普科技产业园
   </author>
-  <preference name="phonegap-version" value="3.4.0" />
-  <gap:plugin name="org.apache.cordova.inappbrowser" />
+  
+  <gap:plugin name="org.apache.cordova.battery-status" />
+    <gap:plugin name="org.apache.cordova.camera" />
+    <gap:plugin name="org.apache.cordova.media-capture" />
+    <gap:plugin name="org.apache.cordova.console" />
+    <gap:plugin name="org.apache.cordova.contacts" />
+    <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="org.apache.cordova.device-motion" />
+    <gap:plugin name="org.apache.cordova.device-orientation" />
+    <gap:plugin name="org.apache.cordova.dialogs" />
+    <gap:plugin name="org.apache.cordova.file" />
+    <gap:plugin name="org.apache.cordova.file-transfer" />
+    <gap:plugin name="org.apache.cordova.geolocation" />
+    <gap:plugin name="org.apache.cordova.globalization" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
+    <gap:plugin name="org.apache.cordova.media" />
+    <gap:plugin name="org.apache.cordova.network-information" />
+    <gap:plugin name="org.apache.cordova.splashscreen" />
+    <gap:plugin name="org.apache.cordova.vibration" />
+    <gap:plugin name="com.phonegap.plugins.barcodescanner"/>
 
-  <feature name="NetworkStatus">
-    <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
-    <param name="ios-package" value="CDVConnection" />
-  </feature>
-
-  <gap:plugin name="com.phonegap.plugin.statusbar" />
   <gap:config-file platform="ios" parent="UIStatusBarHidden"  overwrite="true">
     <true/>
   </gap:config-file>
@@ -29,13 +41,13 @@
   <gap:config-file platform="ios" parent="CFBundleVersion">
     <string>7</string>
   </gap:config-file>
-  <preference name="orientation" value="default" />
-  <preference name="target-device" value="handset" />
-  <preference name="Fullscreen" value="true" />
-  <preference name="SplashScreen" value="splash" />
-  <preference name="EnableViewportScale"      value="false" />
-  <preference name="SplashScreenDelay" value="5000" />
-  <preference name="splash-screen-duration" value="5000"/>
+  <preference name="phonegap-version" value="3.4.0" />
+  <preference name="orientation"      value="default" />
+    <preference name="EnableViewportScale"      value="false" />
+    <preference name="target-device"    value="handset" />
+    <preference name="fullscreen"       value="true" />
+    <preference name="webviewbounce"    value="false" />
+    <preference name="splash-screen-duration" value="2000"/>
   <icon gap:platform="android" gap:qualifier="ldpi" src="res/icons/android/ic_launcher_ldpi.png" />
   <icon gap:platform="android" gap:qualifier="mdpi" src="res/icons/android/ic_launcher_mdpi.png" />
   <icon gap:platform="android" gap:qualifier="hdpi" src="res/icons/android/ic_launcher_hdpi.png" />
@@ -52,7 +64,8 @@
   <gap:splash src="res/screen/android/bg_02.png"  gap:platform="android" gap:density="mdpi" />
   <gap:splash src="res/screen/android/bg_03.png"  gap:platform="android" gap:density="hdpi" />
   <gap:splash src="res/screen/android/bg_04.png" gap:platform="android" gap:density="xhdpi" />
-  <gap:splash src="res/screen/ios/Default.png" gap:platform="ios" width="320" height="480" />
-  <gap:splash src="res/screen/ios/Default@2x.png" gap:platform="ios" width="640" height="960" />
+  <gap:splash src="res/screen/ios/320_480.png" gap:platform="ios" width="320" height="480" />
+  <gap:splash src="res/screen/ios/640_960.png" gap:platform="ios" width="640" height="960" />
+  <gap:splash src="res/screen/ios/640_1136.png" gap:platform="ios" height="1136"  width="640" />
   <!-- content src="http://www.w3.org/2010/05/video/mediaevents.html" / -->
 </widget>
